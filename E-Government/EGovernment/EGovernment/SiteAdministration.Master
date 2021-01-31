@@ -1,0 +1,324 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdministration.master.cs" Inherits="EGovernment.SiteAdministration" %>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - الأحوال المدنية</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style>
+        #menudiv {
+            overflow: hidden;
+            background-color: #222222;
+        }
+
+
+            #menudiv a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            #menudiv a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+
+        .menudiv {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial;
+            color: white;
+            font-size: 16px;
+        }
+
+            .menudiv a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                .menudiv a:hover {
+                    background-color: red;
+                }
+
+        .news .title {
+            border-bottom: 2px solid #cb332e;
+            width: 95%;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            font-family: 'AdobeArabic-Regular';
+        }
+
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            opacity: 1;
+            transition: opacity 0.6s;
+            margin-bottom: 15px;
+        }
+
+            .alert.success {
+                background-color: #4CAF50;
+            }
+
+            .alert.info {
+                background-color: #2196F3;
+            }
+
+            .alert.warning {
+                background-color: #ff9800;
+            }
+
+        .dropbtn {
+            background-color: #222222;
+            color: white;
+            padding: 16px;
+            font-family: Arial;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                direction: ltr;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: grid;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+
+        .myButton {
+            background-color: #44c767;
+            -moz-border-radius: 28px;
+            -webkit-border-radius: 28px;
+            border-radius: 28px;
+            border: 1px solid #18ab29;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 17px;
+            padding: 16px 31px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #2f6627;
+        }
+
+            .myButton:hover {
+                background-color: #5cbf2a;
+            }
+
+            .myButton:active {
+                position: relative;
+                top: 1px;
+            }
+
+        .searchcss {
+            width: 130px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+            /* When the input field gets focus, change its width to 100% */
+            .searchcss:focus {
+                width: 100%;
+            }
+    </style>
+    <script language="javascript" type="text/javascript">
+        function prevent_previous_page_return() {
+            window.history.forward();
+        }
+    </script>
+</head>
+<body onload="prevent_previous_page_return()" onscroll="myFunction()">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header" style="float: right;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/Administration/Default">الرئيسية</a>
+                </div>
+                <div class="menudiv navbar-collapse collapse" id="menudiv">
+                    <div style="float: left;">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <asp:LinkButton Enabled="false" ID="UserName1" Text="" Visible="false" runat="server" />
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="Logout" CausesValidation="false" Visible="false" runat="server" Text="تسجيل خروج" OnClick="Logout_Click" />
+                            </li>
+                            <li><a id="Login" runat="server" href="~/Account/Login">تسجيل الدخول</a></li>
+                            <li><a id="Register" runat="server" href="~/Account/Register">مستخدم جديد</a></li>
+                        </ul>
+                    </div>
+                    <div style="float: right;">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <div class="dropdown">
+                                    <button id="StatisticsReports" visible="false" runat="server" class="dropbtn">التقارير الإحصائية</button>
+                                    <div class="dropdown-content">
+                                        <a id="A3" runat="server" href="/StatisticsReports/MarriedListByAge">المتزوجين في عمر معين</a>
+                                        <a id="A4" runat="server" href="/StatisticsReports/UnmarriedListAfterAge">غير المتزوجين بعد تجاوز عمر معين</a>
+                                        <a id="A5" runat="server" href="/StatisticsReports/MortalityAtAnEarlyAge">الوفيات في عمر معين وسنة محددة</a>
+                                        <a id="A6" runat="server" href="/StatisticsReports/DivorceToMarriageRatioByYear">نسبة الطلاق إلى الزواج في سنة معينة</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button id="dropbtnServices" visible="false" runat="server" class="dropbtn">الخدمات</button>
+                                    <div class="dropdown-content">
+                                        <a id="IndividualCivilRegistrationOut" runat="server" href="/Output/NationalNumber?id=IndividualCivilRegistration">قيد مدني فردي</a>
+                                        <a id="birthOut" runat="server" href="/Output/NationalNumber?id=birth">بيان ولادة</a>
+                                        <a id="deathOut" runat="server" href="/Output/NationalNumber?id=death">بيان وفاة</a>
+                                        <a id="divorceOut" runat="server" href="/Output/NationalNumber?id=divorce">بيان طلاق</a>
+                                        <a id="marrageOut" runat="server" href="/Output/NationalNumber?id=marrage">بيان زواج</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="dropdown">
+                                    <button id="dropbtnDocument" runat="server" visible="false" class="dropbtn">المعاملات</button>
+                                    <div class="dropdown-content">
+                                        <a id="MarriageDoc" runat="server" href="/Administration/Transactions/Marriagedocument">تسجيل عقد الزواج</a>
+                                        <a id="DivorceDoc" runat="server" href="/Administration/Transactions/DivorceDocument">تسجيل واقعة الطلاق</a>
+                                        <a id="BirthDoc" runat="server" href="/Administration/Transactions/BirthDocument">تسجيل واقعة ولادة</a>
+                                        <a id="DeathDoc" runat="server" href="/Administration/Transactions/DeathDocument">تسجيل واقعة وفاة</a>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button id="dropbtnControlCitizens" runat="server" visible="false" class="dropbtn">إدارة المواطنين</button>
+                                        <div class="dropdown-content">
+                                            <a id="AddCitizen" runat="server" href="/Administration/Citizen/AddCitizen">إضافة مواطن</a>
+                                            <a id="SearchCitizens" runat="server" href="/Administration/Citizen/SearchCitizens">بحث عن مواطن</a>
+                                            <a id="AccountConfirmation" runat="server" href="/Account/AccountConfirmation">تفعيل حساب المواطن</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="dropdown">
+                                        <button id="dropbtnControlEmployees" runat="server" visible="false" class="dropbtn">إدارة الموظفين</button>
+                                        <div class="dropdown-content">
+                                            <asp:LinkButton ID="AddEmployee" Text="إضافة موظف" runat="server" OnClick="AddEmployee_click" />
+                                            <a id="SearchEmployee" runat="server" href="/Administration/Employee/SearchEmployee">بحث عن موظف</a>
+                                            <asp:LinkButton ID="Roles" Text="إضافة دور" runat="server" OnClick="AddRole_click" />
+                                            <a id="EditRoles" runat="server" href="/Administration/EditRoles">تعديل دور</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button id="dropbtnControlAffairs" runat="server" visible="false" class="dropbtn">إدارة السجلات المدنية</button>
+                                        <div class="dropdown-content">
+                                            <a id="AddCivilRegistry" runat="server" href="/CivilRegistry/AddCivilRegistry">إضافة سجلات مدنية</a>
+                                            <a id="EditCivilRegistry" runat="server" href="/CivilRegistry/EditCivilRegistry">تعديل السجلات المدنية</a>
+                                        </div>
+                                    </div>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            <div class="alert warning" visible="false" id="lblErrorMSG" runat="server" style="height: 60px; padding: 0px; text-align: center">
+                <strong>
+                    <h3 style="width: auto;">
+                        <asp:Label ID="lblErrorMSG1" runat="server" Text=""></asp:Label></h3>
+                </strong>
+            </div>
+        </p>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:Panel ID="footerPanel" runat="server">
+                <hr />
+
+                <footer>
+                    <div style="float: right; direction: rtl">
+                        <h4>جامعة دمشق</h4>
+                        <h5>كلية الهندسة المعلوماتية</h5>
+                        <p>&copy; <%: DateTime.Now.Year %> - مشروع أتمتة الأحوال المدنية</p>
+                    </div>
+                </footer>
+            </asp:Panel>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow42.js"></script>
+    <noscript>Not seeing a <a href="http://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+
+</body>
+</html>

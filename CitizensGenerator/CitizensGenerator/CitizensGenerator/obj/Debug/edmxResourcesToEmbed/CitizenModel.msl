@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EGovernmentModelStoreContainer" CdmEntityContainer="EGovernmentEntities">
+    <EntitySetMapping Name="tblCitizen">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblCitizen">
+        <MappingFragment StoreEntitySet="tblCitizen">
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="SocialStatus" ColumnName="SocialStatus" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="KiedNumber" ColumnName="KiedNumber" />
+          <ScalarProperty Name="KiedPlace" ColumnName="KiedPlace" />
+          <ScalarProperty Name="Amana" ColumnName="Amana" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+          <ScalarProperty Name="MotherNationalNumber" ColumnName="MotherNationalNumber" />
+          <ScalarProperty Name="FatherNationalNumber" ColumnName="FatherNationalNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

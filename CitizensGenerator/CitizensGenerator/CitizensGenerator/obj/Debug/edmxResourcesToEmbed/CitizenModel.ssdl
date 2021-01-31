@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EGovernmentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblCitizen">
+    <Key>
+      <PropertyRef Name="NationalNumber" />
+    </Key>
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FatherNationalNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherNationalNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="NationalNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birthday" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthPlace" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Amana" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KiedPlace" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KiedNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="SocialStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EGovernmentModelStoreContainer">
+    <EntitySet Name="tblCitizen" EntityType="Self.tblCitizen" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

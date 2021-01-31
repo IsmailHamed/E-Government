@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EGovernmentModelStoreContainer" CdmEntityContainer="EGovernmentEntities">
+    <EntitySetMapping Name="tblBalances">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblBalance">
+        <MappingFragment StoreEntitySet="tblBalance">
+          <ScalarProperty Name="LastPayment" ColumnName="LastPayment" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCitizens">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblCitizen">
+        <MappingFragment StoreEntitySet="tblCitizen">
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="SocialStatus" ColumnName="SocialStatus" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="KiedNumber" ColumnName="KiedNumber" />
+          <ScalarProperty Name="KiedPlace" ColumnName="KiedPlace" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+          <ScalarProperty Name="MotherNationalNumber" ColumnName="MotherNationalNumber" />
+          <ScalarProperty Name="FatherNationalNumber" ColumnName="FatherNationalNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCitizenRoles">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblCitizenRole">
+        <MappingFragment StoreEntitySet="tblCitizenRole">
+          <ScalarProperty Name="Taken" ColumnName="Taken" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCivilAffairs">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblCivilAffair">
+        <MappingFragment StoreEntitySet="tblCivilAffairs">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCivilRegistries">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblCivilRegistry">
+        <MappingFragment StoreEntitySet="tblCivilRegistry">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="CivilAffairsID" ColumnName="CivilAffairsID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDivorceIncidents">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblDivorceIncident">
+        <MappingFragment StoreEntitySet="tblDivorceIncident">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DocumentDate" ColumnName="DocumentDate" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="SecondWitnessNationalNumber" ColumnName="SecondWitnessNationalNumber" />
+          <ScalarProperty Name="FirstWitnessNationalNumber" ColumnName="FirstWitnessNationalNumber" />
+          <ScalarProperty Name="DivorceReason" ColumnName="DivorceReason" />
+          <ScalarProperty Name="AdvocacyNum" ColumnName="AdvocacyNum" />
+          <ScalarProperty Name="DivorcePlace" ColumnName="DivorcePlace" />
+          <ScalarProperty Name="DivorceType" ColumnName="DivorceType" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="WifeNationalNum" ColumnName="WifeNationalNum" />
+          <ScalarProperty Name="HusbandNationalNum" ColumnName="HusbandNationalNum" />
+          <ScalarProperty Name="IncidentNumber" ColumnName="IncidentNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployees">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployees">
+          <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployeesCivilRegistries">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblEmployeesCivilRegistry">
+        <MappingFragment StoreEntitySet="tblEmployeesCivilRegistry">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsController" ColumnName="IsController" />
+          <ScalarProperty Name="IsCivilRegisterer" ColumnName="IsCivilRegisterer" />
+          <ScalarProperty Name="IsManager" ColumnName="IsManager" />
+          <ScalarProperty Name="E_date" ColumnName="E_date" />
+          <ScalarProperty Name="S_date" ColumnName="S_date" />
+          <ScalarProperty Name="CivilRegistryID" ColumnName="CivilRegistryID" />
+          <ScalarProperty Name="EmployeNationalNumber" ColumnName="EmployeNationalNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMarriageContracts">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblMarriageContract">
+        <MappingFragment StoreEntitySet="tblMarriageContracts">
+          <ScalarProperty Name="SecondWitnessNationalNumber" ColumnName="SecondWitnessNationalNumber" />
+          <ScalarProperty Name="FirstWitnessNationalNumber" ColumnName="FirstWitnessNationalNumber" />
+          <ScalarProperty Name="MoneyStatus" ColumnName="MoneyStatus" />
+          <ScalarProperty Name="PostMoney" ColumnName="PostMoney" />
+          <ScalarProperty Name="PreMoney" ColumnName="PreMoney" />
+          <ScalarProperty Name="MarriageLicenseDate" ColumnName="MarriageLicenseDate" />
+          <ScalarProperty Name="MarriageLicenseNumber" ColumnName="MarriageLicenseNumber" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DocumentDate" ColumnName="DocumentDate" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="FamilyNumber" ColumnName="FamilyNumber" />
+          <ScalarProperty Name="WifeNationalNum" ColumnName="WifeNationalNum" />
+          <ScalarProperty Name="HusbandNationalNum" ColumnName="HusbandNationalNum" />
+          <ScalarProperty Name="IncidentNumber" ColumnName="IncidentNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRoles">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblRole">
+        <MappingFragment StoreEntitySet="tblRole">
+          <ScalarProperty Name="UserActivation" ColumnName="UserActivation" />
+          <ScalarProperty Name="StatisticsReports" ColumnName="StatisticsReports" />
+          <ScalarProperty Name="EditRole" ColumnName="EditRole" />
+          <ScalarProperty Name="AddRole" ColumnName="AddRole" />
+          <ScalarProperty Name="SearchCivilRegister" ColumnName="SearchCivilRegister" />
+          <ScalarProperty Name="EditCivilRegister" ColumnName="EditCivilRegister" />
+          <ScalarProperty Name="AddCivilRegister" ColumnName="AddCivilRegister" />
+          <ScalarProperty Name="EditEmployee" ColumnName="EditEmployee" />
+          <ScalarProperty Name="SearchEmployee" ColumnName="SearchEmployee" />
+          <ScalarProperty Name="AddEmployee" ColumnName="AddEmployee" />
+          <ScalarProperty Name="DeathOut" ColumnName="DeathOut" />
+          <ScalarProperty Name="BirthOut" ColumnName="BirthOut" />
+          <ScalarProperty Name="DivorceOut" ColumnName="DivorceOut" />
+          <ScalarProperty Name="ICR_Out" ColumnName="ICR_Out" />
+          <ScalarProperty Name="MarriageOut" ColumnName="MarriageOut" />
+          <ScalarProperty Name="DeathDoc" ColumnName="DeathDoc" />
+          <ScalarProperty Name="BirthDoc" ColumnName="BirthDoc" />
+          <ScalarProperty Name="DivorceDoc" ColumnName="DivorceDoc" />
+          <ScalarProperty Name="MarriageDoc" ColumnName="MarriageDoc" />
+          <ScalarProperty Name="EditCitizen" ColumnName="EditCitizen" />
+          <ScalarProperty Name="SearchCitizens" ColumnName="SearchCitizens" />
+          <ScalarProperty Name="AddCitizen" ColumnName="AddCitizen" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBirthRegistrations">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblBirthRegistration">
+        <MappingFragment StoreEntitySet="tblBirthRegistration">
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Doctor" ColumnName="Doctor" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="BirthType" ColumnName="BirthType" />
+          <ScalarProperty Name="Pregnancy" ColumnName="Pregnancy" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDeadRegistrations">
+      <EntityTypeMapping TypeName="EGovernmentModel.tblDeadRegistration">
+        <MappingFragment StoreEntitySet="tblDeadRegistration">
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DeadReason" ColumnName="DeadReason" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+          <ScalarProperty Name="DeadDate" ColumnName="DeadDate" />
+          <ScalarProperty Name="DeadPlace" ColumnName="DeadPlace" />
+          <ScalarProperty Name="PoliceReportNum" ColumnName="PoliceReportNum" />
+          <ScalarProperty Name="NationalNumber" ColumnName="NationalNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

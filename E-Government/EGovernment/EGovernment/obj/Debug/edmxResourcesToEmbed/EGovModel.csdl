@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EGovernmentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EGovernmentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBalances" EntityType="EGovernmentModel.tblBalance" />
+    <EntitySet Name="tblCitizens" EntityType="EGovernmentModel.tblCitizen" />
+    <EntitySet Name="tblCitizenRoles" EntityType="EGovernmentModel.tblCitizenRole" />
+    <EntitySet Name="tblCivilAffairs" EntityType="EGovernmentModel.tblCivilAffair" />
+    <EntitySet Name="tblCivilRegistries" EntityType="EGovernmentModel.tblCivilRegistry" />
+    <EntitySet Name="tblDivorceIncidents" EntityType="EGovernmentModel.tblDivorceIncident" />
+    <EntitySet Name="tblEmployees" EntityType="EGovernmentModel.tblEmployee" />
+    <EntitySet Name="tblEmployeesCivilRegistries" EntityType="EGovernmentModel.tblEmployeesCivilRegistry" />
+    <EntitySet Name="tblMarriageContracts" EntityType="EGovernmentModel.tblMarriageContract" />
+    <EntitySet Name="tblRoles" EntityType="EGovernmentModel.tblRole" />
+    <EntitySet Name="tblUsers" EntityType="EGovernmentModel.tblUser" />
+    <AssociationSet Name="FK_tblBalance_tblCitizen" Association="EGovernmentModel.FK_tblBalance_tblCitizen">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblBalance" EntitySet="tblBalances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDivorceIncident_tblCitizen" Association="EGovernmentModel.FK_tblDivorceIncident_tblCitizen">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblDivorceIncident" EntitySet="tblDivorceIncidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDivorceIncident_tblCitizen1" Association="EGovernmentModel.FK_tblDivorceIncident_tblCitizen1">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblDivorceIncident" EntitySet="tblDivorceIncidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDivorceIncident_tblCitizen2" Association="EGovernmentModel.FK_tblDivorceIncident_tblCitizen2">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblDivorceIncident" EntitySet="tblDivorceIncidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDivorceIncident_tblCitizen3" Association="EGovernmentModel.FK_tblDivorceIncident_tblCitizen3">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblDivorceIncident" EntitySet="tblDivorceIncidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEmployees_tblCitizen" Association="EGovernmentModel.FK_tblEmployees_tblCitizen">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblEmployee" EntitySet="tblEmployees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMarriageContracts_tblCitizen" Association="EGovernmentModel.FK_tblMarriageContracts_tblCitizen">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblMarriageContract" EntitySet="tblMarriageContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMarriageContracts_tblCitizen1" Association="EGovernmentModel.FK_tblMarriageContracts_tblCitizen1">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblMarriageContract" EntitySet="tblMarriageContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbMarriageContracts_tblCitizen" Association="EGovernmentModel.FK_tbMarriageContracts_tblCitizen">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblMarriageContract" EntitySet="tblMarriageContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbMarriageContracts_tblCitizen1" Association="EGovernmentModel.FK_tbMarriageContracts_tblCitizen1">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblMarriageContract" EntitySet="tblMarriageContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCitizenRole_tblRole1" Association="EGovernmentModel.FK_tblCitizenRole_tblRole1">
+      <End Role="tblRole" EntitySet="tblRoles" />
+      <End Role="tblCitizenRole" EntitySet="tblCitizenRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCitizenRole_tblUser" Association="EGovernmentModel.FK_tblCitizenRole_tblUser">
+      <End Role="tblUser" EntitySet="tblUsers" />
+      <End Role="tblCitizenRole" EntitySet="tblCitizenRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCivilRegistry_tblCivilAffairs" Association="EGovernmentModel.FK_tblCivilRegistry_tblCivilAffairs">
+      <End Role="tblCivilAffair" EntitySet="tblCivilAffairs" />
+      <End Role="tblCivilRegistry" EntitySet="tblCivilRegistries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEmployeesCivilRegistry_tblCivilRegistry" Association="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblCivilRegistry">
+      <End Role="tblCivilRegistry" EntitySet="tblCivilRegistries" />
+      <End Role="tblEmployeesCivilRegistry" EntitySet="tblEmployeesCivilRegistries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEmployeesCivilRegistry_tblEmployees" Association="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblEmployees">
+      <End Role="tblEmployee" EntitySet="tblEmployees" />
+      <End Role="tblEmployeesCivilRegistry" EntitySet="tblEmployeesCivilRegistries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUser_tblEmployees" Association="EGovernmentModel.FK_tblUser_tblEmployees">
+      <End Role="tblEmployee" EntitySet="tblEmployees" />
+      <End Role="tblUser" EntitySet="tblUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEmployeesCivilRegistry_tblRole1" Association="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblRole1">
+      <End Role="tblRole" EntitySet="tblRoles" />
+      <End Role="tblEmployeesCivilRegistry" EntitySet="tblEmployeesCivilRegistries" />
+    </AssociationSet>
+    <EntitySet Name="tblBirthRegistrations" EntityType="EGovernmentModel.tblBirthRegistration" />
+    <AssociationSet Name="FK_tblBirthRegistration_tblCitizen" Association="EGovernmentModel.FK_tblBirthRegistration_tblCitizen">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblBirthRegistration" EntitySet="tblBirthRegistrations" />
+    </AssociationSet>
+    <EntitySet Name="tblDeadRegistrations" EntityType="EGovernmentModel.tblDeadRegistration" />
+    <AssociationSet Name="FK_tblDeadRegistration_tblCitizen" Association="EGovernmentModel.FK_tblDeadRegistration_tblCitizen">
+      <End Role="tblCitizen" EntitySet="tblCitizens" />
+      <End Role="tblDeadRegistration" EntitySet="tblDeadRegistrations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblBalance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Balance" Type="Single" Nullable="false" />
+    <Property Name="LastPayment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCitizen" Relationship="EGovernmentModel.FK_tblBalance_tblCitizen" FromRole="tblBalance" ToRole="tblCitizen" />
+  </EntityType>
+  <EntityType Name="tblCitizen">
+    <Key>
+      <PropertyRef Name="NationalNumber" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FatherNationalNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotherNationalNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BirthPlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KiedPlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KiedNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="SocialStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Religion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblBalances" Relationship="EGovernmentModel.FK_tblBalance_tblCitizen" FromRole="tblCitizen" ToRole="tblBalance" />
+    <NavigationProperty Name="tblDivorceIncidents" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen" FromRole="tblCitizen" ToRole="tblDivorceIncident" />
+    <NavigationProperty Name="tblDivorceIncidents1" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen1" FromRole="tblCitizen" ToRole="tblDivorceIncident" />
+    <NavigationProperty Name="tblDivorceIncidents2" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen2" FromRole="tblCitizen" ToRole="tblDivorceIncident" />
+    <NavigationProperty Name="tblDivorceIncidents3" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen3" FromRole="tblCitizen" ToRole="tblDivorceIncident" />
+    <NavigationProperty Name="tblEmployee" Relationship="EGovernmentModel.FK_tblEmployees_tblCitizen" FromRole="tblCitizen" ToRole="tblEmployee" />
+    <NavigationProperty Name="tblMarriageContracts" Relationship="EGovernmentModel.FK_tblMarriageContracts_tblCitizen" FromRole="tblCitizen" ToRole="tblMarriageContract" />
+    <NavigationProperty Name="tblMarriageContracts1" Relationship="EGovernmentModel.FK_tblMarriageContracts_tblCitizen1" FromRole="tblCitizen" ToRole="tblMarriageContract" />
+    <NavigationProperty Name="tblMarriageContracts2" Relationship="EGovernmentModel.FK_tbMarriageContracts_tblCitizen" FromRole="tblCitizen" ToRole="tblMarriageContract" />
+    <NavigationProperty Name="tblMarriageContracts3" Relationship="EGovernmentModel.FK_tbMarriageContracts_tblCitizen1" FromRole="tblCitizen" ToRole="tblMarriageContract" />
+    <NavigationProperty Name="tblBirthRegistration" Relationship="EGovernmentModel.FK_tblBirthRegistration_tblCitizen" FromRole="tblCitizen" ToRole="tblBirthRegistration" />
+    <NavigationProperty Name="tblDeadRegistration" Relationship="EGovernmentModel.FK_tblDeadRegistration_tblCitizen" FromRole="tblCitizen" ToRole="tblDeadRegistration" />
+  </EntityType>
+  <EntityType Name="tblCitizenRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="NationalNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleId" Type="Int32" />
+    <Property Name="Taken" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblRole" Relationship="EGovernmentModel.FK_tblCitizenRole_tblRole1" FromRole="tblCitizenRole" ToRole="tblRole" />
+    <NavigationProperty Name="tblUser" Relationship="EGovernmentModel.FK_tblCitizenRole_tblUser" FromRole="tblCitizenRole" ToRole="tblUser" />
+  </EntityType>
+  <EntityType Name="tblCivilAffair">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCivilRegistries" Relationship="EGovernmentModel.FK_tblCivilRegistry_tblCivilAffairs" FromRole="tblCivilAffair" ToRole="tblCivilRegistry" />
+  </EntityType>
+  <EntityType Name="tblCivilRegistry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CivilAffairsID" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCivilAffair" Relationship="EGovernmentModel.FK_tblCivilRegistry_tblCivilAffairs" FromRole="tblCivilRegistry" ToRole="tblCivilAffair" />
+    <NavigationProperty Name="tblEmployeesCivilRegistries" Relationship="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblCivilRegistry" FromRole="tblCivilRegistry" ToRole="tblEmployeesCivilRegistry" />
+  </EntityType>
+  <EntityType Name="tblDivorceIncident">
+    <Key>
+      <PropertyRef Name="IncidentNumber" />
+    </Key>
+    <Property Name="IncidentNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HusbandNationalNum" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WifeNationalNum" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncidentDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DivorceType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DivorcePlace" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AdvocacyNum" Type="Int32" />
+    <Property Name="DivorceReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FirstWitnessNationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecondWitnessNationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentNumber" Type="Int32" />
+    <Property Name="DocumentDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCitizen" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen" FromRole="tblDivorceIncident" ToRole="tblCitizen" />
+    <NavigationProperty Name="tblCitizen1" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen1" FromRole="tblDivorceIncident" ToRole="tblCitizen" />
+    <NavigationProperty Name="tblCitizen2" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen2" FromRole="tblDivorceIncident" ToRole="tblCitizen" />
+    <NavigationProperty Name="tblCitizen3" Relationship="EGovernmentModel.FK_tblDivorceIncident_tblCitizen3" FromRole="tblDivorceIncident" ToRole="tblCitizen" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="NationalNumber" />
+    </Key>
+    <Property Name="NationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Specialization" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCitizen" Relationship="EGovernmentModel.FK_tblEmployees_tblCitizen" FromRole="tblEmployee" ToRole="tblCitizen" />
+    <NavigationProperty Name="tblEmployeesCivilRegistries" Relationship="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblEmployees" FromRole="tblEmployee" ToRole="tblEmployeesCivilRegistry" />
+    <NavigationProperty Name="tblUsers" Relationship="EGovernmentModel.FK_tblUser_tblEmployees" FromRole="tblEmployee" ToRole="tblUser" />
+  </EntityType>
+  <EntityType Name="tblEmployeesCivilRegistry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeNationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CivilRegistryID" Type="Int32" />
+    <Property Name="S_date" Type="DateTime" Precision="0" />
+    <Property Name="E_date" Type="DateTime" Precision="0" />
+    <Property Name="IsManager" Type="Boolean" />
+    <Property Name="IsCivilRegisterer" Type="Boolean" />
+    <Property Name="IsController" Type="Boolean" />
+    <Property Name="RoleId" Type="Int32" />
+    <NavigationProperty Name="tblCivilRegistry" Relationship="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblCivilRegistry" FromRole="tblEmployeesCivilRegistry" ToRole="tblCivilRegistry" />
+    <NavigationProperty Name="tblEmployee" Relationship="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblEmployees" FromRole="tblEmployeesCivilRegistry" ToRole="tblEmployee" />
+    <NavigationProperty Name="tblRole" Relationship="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblRole1" FromRole="tblEmployeesCivilRegistry" ToRole="tblRole" />
+  </EntityType>
+  <EntityType Name="tblMarriageContract">
+    <Key>
+      <PropertyRef Name="IncidentNumber" />
+    </Key>
+    <Property Name="IncidentNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HusbandNationalNum" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WifeNationalNum" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FamilyNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContractDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentNumber" Type="Int32" />
+    <Property Name="DocumentDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IncidentDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MarriageLicenseNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MarriageLicenseDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PreMoney" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostMoney" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoneyStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstWitnessNationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecondWitnessNationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCitizen" Relationship="EGovernmentModel.FK_tblMarriageContracts_tblCitizen" FromRole="tblMarriageContract" ToRole="tblCitizen" />
+    <NavigationProperty Name="tblCitizen1" Relationship="EGovernmentModel.FK_tblMarriageContracts_tblCitizen1" FromRole="tblMarriageContract" ToRole="tblCitizen" />
+    <NavigationProperty Name="tblCitizen2" Relationship="EGovernmentModel.FK_tbMarriageContracts_tblCitizen" FromRole="tblMarriageContract" ToRole="tblCitizen" />
+    <NavigationProperty Name="tblCitizen3" Relationship="EGovernmentModel.FK_tbMarriageContracts_tblCitizen1" FromRole="tblMarriageContract" ToRole="tblCitizen" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddCitizen" Type="Boolean" Nullable="false" />
+    <Property Name="SearchCitizens" Type="Boolean" Nullable="false" />
+    <Property Name="EditCitizen" Type="Boolean" Nullable="false" />
+    <Property Name="MarriageDoc" Type="Boolean" Nullable="false" />
+    <Property Name="DivorceDoc" Type="Boolean" Nullable="false" />
+    <Property Name="BirthDoc" Type="Boolean" Nullable="false" />
+    <Property Name="DeathDoc" Type="Boolean" Nullable="false" />
+    <Property Name="MarriageOut" Type="Boolean" Nullable="false" />
+    <Property Name="ICR_Out" Type="Boolean" Nullable="false" />
+    <Property Name="DivorceOut" Type="Boolean" Nullable="false" />
+    <Property Name="BirthOut" Type="Boolean" Nullable="false" />
+    <Property Name="DeathOut" Type="Boolean" Nullable="false" />
+    <Property Name="AddEmployee" Type="Boolean" Nullable="false" />
+    <Property Name="SearchEmployee" Type="Boolean" Nullable="false" />
+    <Property Name="EditEmployee" Type="Boolean" Nullable="false" />
+    <Property Name="AddCivilRegister" Type="Boolean" Nullable="false" />
+    <Property Name="EditCivilRegister" Type="Boolean" Nullable="false" />
+    <Property Name="SearchCivilRegister" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblCitizenRoles" Relationship="EGovernmentModel.FK_tblCitizenRole_tblRole1" FromRole="tblRole" ToRole="tblCitizenRole" />
+    <NavigationProperty Name="tblEmployeesCivilRegistries" Relationship="EGovernmentModel.FK_tblEmployeesCivilRegistry_tblRole1" FromRole="tblRole" ToRole="tblEmployeesCivilRegistry" />
+    <Property Name="AddRole" Type="Boolean" Nullable="false" />
+    <Property Name="EditRole" Type="Boolean" Nullable="false" />
+    <Property Name="StatisticsReports" Type="Boolean" Nullable="false" />
+    <Property Name="UserActivation" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCitizenRoles" Relationship="EGovernmentModel.FK_tblCitizenRole_tblUser" FromRole="tblUser" ToRole="tblCitizenRole" />
+    <NavigationProperty Name="tblEmployee" Relationship="EGovernmentModel.FK_tblUser_tblEmployees" FromRole="tblUser" ToRole="tblEmployee" />
+  </EntityType>
+  <Association Name="FK_tblBalance_tblCitizen">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblBalance" Role="tblBalance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblBalance">
+        <PropertyRef Name="NationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDivorceIncident_tblCitizen">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblDivorceIncident" Role="tblDivorceIncident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblDivorceIncident">
+        <PropertyRef Name="HusbandNationalNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDivorceIncident_tblCitizen1">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblDivorceIncident" Role="tblDivorceIncident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblDivorceIncident">
+        <PropertyRef Name="WifeNationalNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDivorceIncident_tblCitizen2">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblDivorceIncident" Role="tblDivorceIncident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblDivorceIncident">
+        <PropertyRef Name="FirstWitnessNationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDivorceIncident_tblCitizen3">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblDivorceIncident" Role="tblDivorceIncident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblDivorceIncident">
+        <PropertyRef Name="SecondWitnessNationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEmployees_tblCitizen">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblEmployee" Role="tblEmployee" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblEmployee">
+        <PropertyRef Name="NationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMarriageContracts_tblCitizen">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblMarriageContract" Role="tblMarriageContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblMarriageContract">
+        <PropertyRef Name="FirstWitnessNationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMarriageContracts_tblCitizen1">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblMarriageContract" Role="tblMarriageContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblMarriageContract">
+        <PropertyRef Name="SecondWitnessNationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbMarriageContracts_tblCitizen">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblMarriageContract" Role="tblMarriageContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblMarriageContract">
+        <PropertyRef Name="HusbandNationalNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbMarriageContracts_tblCitizen1">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblMarriageContract" Role="tblMarriageContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblMarriageContract">
+        <PropertyRef Name="WifeNationalNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCitizenRole_tblRole1">
+    <End Type="EGovernmentModel.tblRole" Role="tblRole" Multiplicity="0..1" />
+    <End Type="EGovernmentModel.tblCitizenRole" Role="tblCitizenRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCitizenRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCitizenRole_tblUser">
+    <End Type="EGovernmentModel.tblUser" Role="tblUser" Multiplicity="0..1" />
+    <End Type="EGovernmentModel.tblCitizenRole" Role="tblCitizenRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCitizenRole">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCivilRegistry_tblCivilAffairs">
+    <End Type="EGovernmentModel.tblCivilAffair" Role="tblCivilAffair" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblCivilRegistry" Role="tblCivilRegistry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCivilAffair">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCivilRegistry">
+        <PropertyRef Name="CivilAffairsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEmployeesCivilRegistry_tblCivilRegistry">
+    <End Type="EGovernmentModel.tblCivilRegistry" Role="tblCivilRegistry" Multiplicity="0..1" />
+    <End Type="EGovernmentModel.tblEmployeesCivilRegistry" Role="tblEmployeesCivilRegistry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCivilRegistry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblEmployeesCivilRegistry">
+        <PropertyRef Name="CivilRegistryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEmployeesCivilRegistry_tblEmployees">
+    <End Type="EGovernmentModel.tblEmployee" Role="tblEmployee" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblEmployeesCivilRegistry" Role="tblEmployeesCivilRegistry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmployee">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblEmployeesCivilRegistry">
+        <PropertyRef Name="EmployeNationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUser_tblEmployees">
+    <End Type="EGovernmentModel.tblEmployee" Role="tblEmployee" Multiplicity="0..1" />
+    <End Type="EGovernmentModel.tblUser" Role="tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmployee">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblUser">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEmployeesCivilRegistry_tblRole1">
+    <End Type="EGovernmentModel.tblRole" Role="tblRole" Multiplicity="0..1" />
+    <End Type="EGovernmentModel.tblEmployeesCivilRegistry" Role="tblEmployeesCivilRegistry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblEmployeesCivilRegistry">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblBirthRegistration">
+    <Key>
+      <PropertyRef Name="NationalNumber" />
+    </Key>
+    <Property Name="NationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pregnancy" Type="Int32" Nullable="false" />
+    <Property Name="BirthType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BirthPlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Doctor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCitizen" Relationship="EGovernmentModel.FK_tblBirthRegistration_tblCitizen" FromRole="tblBirthRegistration" ToRole="tblCitizen" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IncidentDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tblBirthRegistration_tblCitizen">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblBirthRegistration" Role="tblBirthRegistration" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblBirthRegistration">
+        <PropertyRef Name="NationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblDeadRegistration">
+    <Key>
+      <PropertyRef Name="NationalNumber" />
+    </Key>
+    <Property Name="NationalNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PoliceReportNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeadPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeadDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeadReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCitizen" Relationship="EGovernmentModel.FK_tblDeadRegistration_tblCitizen" FromRole="tblDeadRegistration" ToRole="tblCitizen" />
+    <Property Name="IncidentDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tblDeadRegistration_tblCitizen">
+    <End Type="EGovernmentModel.tblCitizen" Role="tblCitizen" Multiplicity="1" />
+    <End Type="EGovernmentModel.tblDeadRegistration" Role="tblDeadRegistration" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblCitizen">
+        <PropertyRef Name="NationalNumber" />
+      </Principal>
+      <Dependent Role="tblDeadRegistration">
+        <PropertyRef Name="NationalNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
